@@ -7,7 +7,6 @@ import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
 import { Suspense } from "react";
 import Loader from "../components/Loader";
-import { OrbitControls } from "@react-three/drei";
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
@@ -26,7 +25,6 @@ const Hero = () => {
                 scale={isMobile && 0.23}
                 position={isMobile && [0, -1.5, 0]}
               />
-              <OrbitControls />
             </Float>
             <Rig />
           </Suspense>
