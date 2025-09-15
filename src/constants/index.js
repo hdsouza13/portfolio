@@ -1,129 +1,18 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Fast Bit Finder (FastBF) — Custom Register-Register Machine",
     description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
+      "Hardware Designer & Programmer",
     subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
+      "● Designed and implemented a specialized register-register machine optimized for single-cycle bit-index operations.", 
+"● Developed an instruction capable of identifying a 1-bit at a specific byte position in one cycle, reducing typical 3-cycle operations." ,
+           "● Applied the architecture to use cases such as IEEE to fixed-point conversion and divisibility checks by powers of two.", 
+           "● Improved processing efficiency by eliminating the need for multiple masking and AND operations in bit-level tasks." 
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
-      },
-      {
-        id: 2,
-        name: ".Net",
-        path: "/assets/logos/dotnet.svg",
-      },
-      {
-        id: 3,
-        name: "Ef Core",
-        path: "/assets/logos/efcore.png",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Authentication & Authorization System",
-    description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
-    subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/auth-system.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Auth0",
-        path: "/assets/logos/auth0.svg",
-      },
-      {
-        id: 2,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Blazor Web App",
-    description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
-    subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
-      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/blazor-app.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: ".NET Core",
-        path: "/assets/logos/dotnetcore.svg",
-      },
-      {
-        id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "C++ Game Engine",
-    description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
-    subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
-      "Developed a physics engine with collision detection and particle effects.",
-      "Implemented a scripting system for easy game customization.",
-      "Optimized performance with multi-threading and efficient memory management.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/game-engine.jpg",
+    image: "/assets/projects/Fast Bit Finder.png",
     tags: [
       {
         id: 1,
@@ -132,93 +21,61 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
-      },
-      {
-        id: 3,
-        name: "Git",
-        path: "/assets/logos/git.svg",
-      },
-      {
-        id: 4,
-        name: "Microsoft",
-        path: "/assets/logos/microsoft.svg",
-      },
+        name: "SystemVerilog",
+        path: "/assets/logos/SystemVerilog-.png",
+      }
     ],
   },
   {
-    id: 5,
-    title: "WordPress Custom Theme",
+    id: 2,
+    title: "Nasa California Space Grant Consortium",
     description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
+      "Programmer",
     subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
+      "● Responsible for the programming team.",
+"● The Lunar Lava Tube Exploration challenges teams to explore a lunar lava tube with an eye toward its potential for human habitation. The overall challenge is building a rover and developing programs that allow the rover to navigate the challenge course, a model lunar lava tube using an arduino."
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
+    image: "/assets/projects/NasaHover.jpg",
     tags: [
       {
         id: 1,
-        name: "WordPress",
-        path: "/assets/logos/wordpress.svg",
-      },
-      {
-        id: 2,
-        name: "HTML5",
-        path: "/assets/logos/html5.svg",
-      },
-      {
-        id: 3,
-        name: "CSS3",
-        path: "/assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "Vite.js",
-        path: "/assets/logos/vitejs.svg",
-      },
+        name: "Arduino",
+        path: "/assets/logos/Arduino_Logo.svg",
+      }
     ],
   },
   {
-    id: 6,
-    title: "Online Learning Platform",
+    id: 3,
+    title: "Regency Young Scholar Science Program ",
     description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
+      "Mentor",
     subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
+      "● Responsible for teaching physics through experiments to low-income children.", 
+"● Developed trust-based relationships with mentees through active listening and empathetic communication.",
+"● Enhanced mentee performance by providing personalized guidance and support."
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/elearning.jpg",
+    image: "/assets/projects/Regency Young.png",
     tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: "Azure",
-        path: "/assets/logos/azure.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "/assets/logos/stripe.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Clube Pitangueiras",
+    description:
+      "Tennis Assistant",
+    subDescription: [
+      "● Assisted my coach in teaching a group of 10 children from a community to play tennis.", 
+"● Enhanced player performance by providing individualized coaching and targeted training drills.",
+"● Contributed to team success by assisting head coach in strategic game planning and match analysis." 
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/Tenis.jpg",
+    tags: [
     ],
   },
 ];
@@ -231,48 +88,50 @@ export const mySocials = [
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/ali-sanati/",
+    href: "https://www.linkedin.com/in/hugo-dsouza/?locale=en_US",
     icon: "/assets/socials/linkedIn.svg",
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/ali.sanatidev/reels/",
+    href: "",
     icon: "/assets/socials/instagram.svg",
   },
 ];
 
 export const experiences = [
   {
-    title: "Software Developer",
-    job: "Security & Defense Projects",
-    date: "2021-2023",
+    title: "Colegio Santo Americo",
+    job: "High School Degree",
+    date: "2016-2019",
     contents: [
-      "Enhanced application security and developed new features, adhering to standards set by the Passive Defense Organization and National Cyberspace Center.",
-      "Designed and implemented intuitive map interfaces using MapsUI, enhancing user experience and enabling seamless interactive map integration.",
-      "Developed applications for industrial automation, leveraging C++ and the Fatek API for PLC communication.",
-      "Enhanced responsiveness and usability of applications using Windows Forms and WPF frameworks.",
-      "Executed XML to SVG conversions using X-DOM, ensuring dynamic and efficient data visualization.",
+      "RELIGION", "PORTUGUESE", "WRITING", "ENGLISH", "MATH", "CHEMISTRY", "PHYSICS", "BIOLOGY", "HISTORY", "GEOGRAPHY", "ARTS", "PHILOSPHY"
     ],
   },
   {
-    title: "Back-End Developer",
-    job: "Car Manufacture",
-    date: "2023-2024",
+    title: "Orange Coast College",
+    job: "Associate Degree",
+    major: "Computer Science",
+    date: "2020-2023",
     contents: [
-      "Engineered systems for large-scale data ingestion and analysis, ensuring efficient data processing and storage.",
-      "Developed back-end systems enabling vehicle-to-cloud communication for telemetry, diagnostics, and remote control:",
-      "✅ Implemented secure APIs, following ISO 26262 automotive safety standards.",
-      "✅ Ensured data privacy for customers and partners through industry-compliant protocols.",
-      "✅ Delivered remote features like over-the-air updates, real-time tracking, and remote start capabilities.",
+        "C++", "Java", "Discrete Structures", "Data Structure", "Computer Architecture", "Intro Linear Alg & Diff Equa",
+        "Calculos Honors 1, 2, 3 "
     ],
   },
   {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2025-Present",
+    title: "University of Califonia, San Diego",
+    job: "Barcheleor Degree",
+    major: "Computer Engineering",
+    date: "2023-2025",
     contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
+      "CSE:",
+       "Software Engineering", "Software Tools & Technique Lab", "Math/Algorithm&Systems Analys", "Advanced Data Structures", "Design & Analysis of Algorithm",
+       "Princ/Computer Operating Syst", "Component&Desgn Tech/Digtl Sy", "Digital Systems Laboratory", "Intro/Computer Architecture", "Project/Computer Architecture",
+       "Web Client Languages", "Online Database Analytics App", "Entrepreneurship for Engineer", "Intro to Comp Vision I",
+
+      "ECE:",
+      "Introduction to Analog Design", "Circuits and Systems", "Components & Circuits Lab",
+"Linear Systems Fundamentals", "Digital Circuits", "Engineering Probability&Stats", "Advanced Digital Design Proj", 
+
     ],
   },
 ];

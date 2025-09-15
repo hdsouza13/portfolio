@@ -22,39 +22,105 @@ export const Timeline = ({ data }) => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  // helper: split UCSD contents into CSE and ECE
+  const splitContents = (contents) => {
+    const cseIndex = contents.indexOf("CSE:");
+    const eceIndex = contents.indexOf("ECE:");
+
+    const cse = contents.slice(cseIndex + 1, eceIndex);
+    const ece = contents.slice(eceIndex + 1);
+
+    return { cse, ece };
+  };
+
   return (
     <div className="c-space section-spacing" ref={containerRef}>
-      <h2 className="text-heading">My Work Experience</h2>
+      <h2 className="text-heading">Academic Background</h2>
       <div ref={ref} className="relative pb-20">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
-          >
-            <div className="sticky z-40 flex flex-col items-center self-start max-w-xs md:flex-row top-40 lg:max-w-sm md:w-full">
-              <div className="absolute flex items-center justify-center w-10 h-10 rounded-full -left-[15px] bg-midnight">
-                <div className="w-4 h-4 p-2 border rounded-full bg-neutral-800 border-neutral-700" />
-              </div>
-              <div className="flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-4xl text-neutral-300">
-                <h3>{item.date}</h3>
-                <h3 className="text-3xl text-neutral-400">{item.title}</h3>
-                <h3 className="text-3xl text-neutral-500">{item.job}</h3>
-              </div>
-            </div>
+        {data.map((item, index) => {
+          const isUCSD =
+            item.title.includes("University of Califonia, San Diego") &&
+            item.job.includes("Barcheleor Degree");
 
-            <div className="relative w-full pl-20 pr-4 md:pl-4">
-              <div className="block mb-4 text-2xl font-bold text-left text-neutral-300 md:hidden ">
-                <h3>{item.date}</h3>
-                <h3>{item.job}</h3>
+          return (
+            <div
+              key={index}
+              className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            >
+              {/* Left timeline marker */}
+              <div className="sticky z-40 flex flex-col items-center self-start max-w-xs md:flex-row top-40 lg:max-w-sm md:w-full">
+                <div className="absolute flex items-center justify-center w-10 h-10 rounded-full -left-[15px] bg-midnight">
+                  <div className="w-4 h-4 p-2 border rounded-full bg-neutral-800 border-neutral-700" />
+                </div>
+                <div className="flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-4xl text-neutral-300">
+                  <h3>{item.date}</h3>
+                  <h3 className="text-3xl text-neutral-400">{item.title}</h3>
+                  <h3 className="text-3xl text-neutral-500">{item.job}</h3>
+                  {item.major && (
+                    <h3 className="text-2xl text-neutral-600">{item.major}</h3>
+                  )}
+                </div>
               </div>
-              {item.contents.map((content, index) => (
-                <p className="mb-3 font-normal text-neutral-400" key={index}>
-                  {content}
-                </p>
-              ))}
+
+              {/* Right side content */}
+              <div className="relative w-full pl-20 pr-4 md:pl-4">
+                <div className="block mb-4 text-2xl font-bold text-left text-neutral-300 md:hidden ">
+                  <h3>{item.date}</h3>
+                  <h3>{item.job}</h3>
+                  {item.major && (
+                    <h3 className="text-lg text-neutral-500">{item.major}</h3>
+                  )}
+                </div>
+
+                {isUCSD ? (
+                  // Two-column layout for UCSD Bachelor Degree
+                  (() => {
+                    const { cse, ece } = splitContents(item.contents);
+                    return (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                          <h4 className="text-lg font-semibold text-purple-400">
+                            CSE
+                          </h4>
+                          {cse.map((content, idx) => (
+                            <p
+                              className="mb-3 font-normal text-neutral-400"
+                              key={idx}
+                            >
+                              {content}
+                            </p>
+                          ))}
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-purple-400">
+                            ECE
+                          </h4>
+                          {ece.map((content, idx) => (
+                            <p
+                              className="mb-3 font-normal text-neutral-400"
+                              key={idx}
+                            >
+                              {content}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })()
+                ) : (
+                  // Default one-column for other schools
+                  item.contents.map((content, idx) => (
+                    <p className="mb-3 font-normal text-neutral-400" key={idx}>
+                      {content}
+                    </p>
+                  ))
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
+
+        {/* Timeline vertical line */}
         <div
           style={{
             height: height + "px",
